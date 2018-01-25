@@ -12,6 +12,10 @@ total = price * quantity;
 // Get the element with an id of cost.
 var el = document.getElementById('cost');
 el.textContent = '$' + total;
+var el1 = document.getElementById('cost1');
+el1.innerHTML = '$'+total;
+var tar = document.getElementById('span');
+tar.textContent = '$'+total;
 
 /* 
 NOTE: textContent does not work in IE8 or earlier

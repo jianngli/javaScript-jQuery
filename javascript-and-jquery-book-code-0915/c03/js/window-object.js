@@ -16,3 +16,11 @@ var el = document.getElementById('info');
 el.innerHTML = msg;
 // Find the location of the current page and display it in an alert box
 alert('Current page: ' + window.location);
+console.log(innerHeight);
+console.log(innerWidth);
+console.log(document.domain);
+console.log(document.URL);
+var s = 'ssss'.toUpperCase();
+s =s.toLowerCase();
+var name =  '讲理';
+console.log(name.length);
