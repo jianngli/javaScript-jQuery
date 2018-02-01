@@ -13,4 +13,4 @@ function charCount(e) {                                    // Declare function
   lastkey.textContent = 'Last key in ASCII code: ' + e.keyCode; // Create msg 
 }
 el = document.getElementById('message');                   // Get msg element
-el.addEventListener('keyup', charCount, false); // on keyup - call charCount()
+el.addEventListener('keyup', charCount, false);   // on keyup - call charCount()

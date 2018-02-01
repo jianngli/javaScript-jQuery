@@ -8,11 +8,32 @@
     <div id="page">
       <h1>List King</h1>
       <h2>Buy Groceries <span id="counter">1</span></h2>
-      <ul id="list">
-        <li>fresh figs</li>
+      <ul id="workList">
+        <li><input type="text" placeholder="input-text:time"></li>
       </ul>
-      <div class="button"><a href="/additem" class="add">Add list item</a></div>
+      <button type="button" id="add">Add list item</button>
+      <button type="button" id="remove">remove</button>
     </div>
-    <script src="js/mutation.js"></script>
+    <!--<script src="js/mutation.js"></script>-->
+    <script>
+      var add,b,workList,newNodeLi,newNodeInput;
+      add = document.getElementById('add');
+      b = document.getElementById('remove');
+      workList = document.getElementById('workList');
+      function item(e) {
+          newNodeLi = document.createElement('li');
+          newNodeLi.setAttribute('class','newClass');
+          newNodeInput = document.createElement('input');
+          newNodeLi.appendChild(newNodeInput);
+          workList.appendChild(newNodeLi);
+      }
+      function remove(e) {
+          var newClass = document.getElementsByClassName('newClass');
+          newClass.removeChild('input');
+          newClass.parentNode.removeChild(newClass);
+      }
+      add.addEventListener('click',item,false);
+      b.addEventListener('click',remove,false);
+    </script>
   </body>
 </html>

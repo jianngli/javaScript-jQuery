@@ -29,3 +29,18 @@ var headingText = heading.firstChild.nodeValue;                    // h2 text
 var totalItems = listItems.length;                                 // No. of <li> elements
 var newHeading =  headingText + '<span>' + totalItems + '</span>'; // Content
 heading.innerHTML = newHeading;                                    // Update h2 using innerHTML (not textContent) because it contains markup
+
+
+
+
+
+function submit1() {
+    var newLi ='';
+    newLi += '<li><input type="text" placeholder="newLi Submit input!" aria-placeholder="这是表单">' ;
+    newLi += '<input type="text" placeholder="newLi Submit input!" aria-placeholder="这是表单"></li>';
+    var newU = document.getElementsByTagName('ul').item(0);
+    newU.innerHTML= newLi;
+}
+
+var add = document.getElementById('add');
+add.onclick = submit1;

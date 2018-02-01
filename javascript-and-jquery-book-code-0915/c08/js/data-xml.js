@@ -35,8 +35,24 @@ xhr.onload = function() {              // When response has loaded
   }
 // }
 
-  function getNodeValue(obj, tag) {                   // Gets content from XML
+  function getNodeValue(obj, tag) {
+    console.log('obj:');
+    console.log(obj);
+    console.log('tag:');
+    console.log(tag);
+    console.log('obj对象getElement方法:');
+    console.log(obj.getElementsByTagName(tag));
+      console.log('obj对象getElementsByTagName(tag)[0]:');
+
+      console.log(obj.getElementsByTagName(tag)[0]);
+      console.log('obj对象getElementsByTagName(tag)[0].firstChild:');
+
+      console.log(obj.getElementsByTagName(tag)[0].firstChild);
+    console.log('obj.getElementsByTagName(tag)[0].firstChild.nodeValue:');
+    console.log(obj.getElementsByTagName(tag)[0].firstChild.nodeValue);
+    // Gets content from XML
     return obj.getElementsByTagName(tag)[0].firstChild.nodeValue;
+
   }
 
  // THE FINAL PART IS THE SAME AS THE HTML EXAMPLE BUT IT REQUESTS AN XML FILE

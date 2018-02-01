@@ -58,3 +58,5 @@ if (document.addEventListener) {                 // If event listener supported
  // If keyup event fires on noteInput call writeLabel()
   noteInput.attachEvent('onkeyup', writeLabel);
 }
+
+

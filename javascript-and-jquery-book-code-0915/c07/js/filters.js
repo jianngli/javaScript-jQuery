@@ -1,7 +1,8 @@
 $(function() {
   var $listItems = $('li');
 
-  $listItems.filter('.hot:last').removeClass('hot');
+  $listItems.filter('.hot:last').removeChild();
+
   $('li:not(.hot)').addClass('cool');
   $listItems.has('em').addClass('complete');
 
